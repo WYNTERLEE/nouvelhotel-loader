@@ -1,0 +1,128 @@
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+.hero {
+	height: 100vh;
+	background: linear-gradient(-45deg, rgb(15, 21, 26,.9),rgb(25, 35, 42,.9) , rgb(67, 94, 117,.9), rgb(255, 250, 241,.6)) 0 0 / 800% no-repeat, url(../img/mt.jpg) 0 0 / cover no-repeat;
+	-webkit-animation: gradientAnimation 20s ease infinite;
+	animation: gradientAnimation 20s ease infinite;
+  padding: 20%;
+}
+@-webkit-keyframes gradientAnimation {
+	0%   { background-position: 0% 30%, 0 0;}
+	50%  { background-position: 100% 70%, 0 0;}
+	100% { background-position: 0% 30%, 0 0;}
+}
+@keyframes gradientAnimation {
+	0%   { background-position: 0% 30%, 0 0;}
+	50%  { background-position: 100% 70%, 0 0;}
+	100% { background-position: 0% 30%, 0 0;}
+}
+
+.img{
+  /* border: 1px solid #000; */
+  /* position: absolute; */
+	/* top: 50%;
+	left: 50%; */
+  /* border: 1px solid #000; */
+	/* -webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%); */
+  margin-bottom: 10px;
+  height: 100px;
+  width: 100px;
+}
+
+.box{
+  /* position: relative; */
+  display: flex;
+  /* border: 1px solid #000; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading span {
+  /* position: absolute; */
+  
+	/* top: 50%;
+	left: 50%; */
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	/* color: #fff;
+	text-align: center; */
+	/* white-space: nowrap; */
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.6em;
+  height: 0.6em;
+  margin: 0.1em;
+/* background: #007DB6; */
+border-radius: .6em;
+animation: loading 1s infinite alternate;
+}
+
+/*
+* Dots Colors
+* Smarter targeting vs nth-of-type?
+*/
+.loading span:nth-of-type(1) {
+color: #E8D3B1;
+animation-delay: 0s;
+}
+.loading span:nth-of-type(2) {
+color: #FFE8C3;
+animation-delay: 0.2s;
+}
+.loading span:nth-of-type(3) {
+color: #FFEDCF;
+animation-delay: 0.4s;
+}
+.loading span:nth-of-type(4) {
+color: #FFF1DA;
+animation-delay: 0.6s;
+}
+.loading span:nth-of-type(5) {
+color: #FFF6E6;
+animation-delay: 0.8s;
+}
+.loading span:nth-of-type(6) {
+color: #FFFAF1;
+animation-delay: 1.0s;
+}
+.loading span:nth-of-type(8) {
+color: #FFF6E6;
+animation-delay: 1.2s;
+}
+.loading span:nth-of-type(9) {
+color: #FFF1DA;
+animation-delay: 1.4s;
+}
+.loading span:nth-of-type(10) {
+color: #FFEDCF;
+animation-delay: 1.6s;
+}
+.loading span:nth-of-type(11) {
+color: #FFE8C3;
+animation-delay: 1.8s;
+}
+.loading span:nth-of-type(12) {
+color: #E8D3B1;
+animation-delay: 2.0s;
+}
+/*
+* Animation keyframes
+* Use transition opacity instead of keyframes?
+*/
+@keyframes loading {
+0% {
+  opacity: 0;
+}
+100% {
+  opacity: 1;
+}
+}
